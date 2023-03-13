@@ -6,7 +6,7 @@
 trigger:
 - main
 
-pool: Hosted Agent
+pool: DESKTOP-T2H9O8T
 
 variables:
   solution: '**/*.sln'
