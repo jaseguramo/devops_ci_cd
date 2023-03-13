@@ -6,7 +6,8 @@
 trigger:
 - main
 
-pool: DESKTOP-T2H9O8T
+pool:
+  name: default
 
 variables:
   solution: '**/*.sln'
