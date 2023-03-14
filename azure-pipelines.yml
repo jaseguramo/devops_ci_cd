@@ -28,11 +28,6 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
-#- task: VSTest@2
-#  inputs:
-#    platform: '$(buildPlatform)'
-#    configuration: '$(buildConfiguration)'
-
 - task: CopyFiles@2
   inputs:
     Contents: '**'
@@ -42,3 +37,10 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'aspnet_files'
     publishLocation: 'Container'
+
+- task: DotNetCoreCLI@2
+  name: "RunUnitTest"
+  inputs:
+    command: 'test'
+    projects: '**/SeleniumForAzurePipelines.csproj'
+    configuration: '$(buildConfiguration)'
