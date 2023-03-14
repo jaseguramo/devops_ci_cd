@@ -42,5 +42,5 @@ steps:
   name: "RunUnitTest"
   inputs:
     command: 'test'
-    projects: '**/SeleniumForAzurePipelines.csproj'
+    projects: '**/*SeleniumForAzurePipelines*.csproj'
     configuration: '$(buildConfiguration)'
